@@ -1,0 +1,64 @@
+a {
+
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+/*promos*/
+
+.promos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(4, 196, 196);
+    
+
+}
+
+.promos h3{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+                                /*busqueda*/
+
+.busqueda{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+
+}
+
+.busqueda h1{
+    padding: 20px;
+}
+
+.busqueda a {
+
+    color: rgb(25, 25, 25);
+    padding: 20px;
+
+}
+
+
+
+                                /*navegacion*/
+
+.navegacion nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navegacion a {
+    padding: 15px;
+
+}
