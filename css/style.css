@@ -5,7 +5,7 @@
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #5ac5aa;
-    --secundario: #FFC107;
+    --secundario: #f3b704;
     --gris: #757575;
 }
        
@@ -13,65 +13,91 @@
       /*principal*/
 
 html{
-    font-size: 60.5%;
+    font-size: 55%;
     font-family: sans-serif;/*para que se aplique a todos los textos*/
     
 }
 body{
 
-    font-size: 16px; /*1rem = 10px*/
-    margin: 0; /*para tomar todo el espacio de mis etiquetas*/
+  font-size: 15px; /*1rem = 10px*/
+  margin: 0;
+ 
+  }
+
+h1,h2,h3{
+  color:#1c1b1b
 }
 
 a {
     text-decoration: none;
 }
-
+input:focus {
+  outline: none; /* Elimina el contorno del borde al enfocarse */
+}
 
                         /* Header de la Pagina */
-.header-principal{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+
+
+.relleno{
+  margin: 0;  /*quitamos el margin para q tome todo el color de fondo.*/
+  padding: 2rem; /*relleno del contenedor h3.*/
+  font-size: 1.5rem; /*tamaño de letra del h3*/
+  text-align: center; /*centramos el contenido h3*/
+  background-color: var(--primario) /*color de fondo del h3*/
  
 }
 
-
-
-.header-principal input {
-    width: 40rem; /*largo del input */
-    height: 4.5rem; /*altura del input*/
-    font-size: 1.5rem;  /*tamaño del texto ingresado en el input*/;
-    padding-left: 2.5rem; /*rellenamos el lado izquierdo DENTRO del input*/
-
+.contenedor-header-principal{
+  display: flex; /* Utiliza flexbox para el diseño */
+  align-items: center;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  transform: scale(1);
+  width: 100%; /* Asegura que ocupe todo el ancho */
 }
 
 
+.header-contenido{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  margin-right: 2.5rem;
+ 
+}
+
 @media (min-width: 768px) {
-  .header-principal input{
+    .header-contenido {
+      flex-direction: row;
+      gap: 4rem
+    }
+}
+
+.header-contenido input {
+    width: 35rem; /*largo del input */
+    height: 4.5rem; /*altura del input*/
+    font-size: 1.8rem;  /*tamaño del texto ingresado en el input*/;
+    padding-left: 2.5rem; /*rellenamos el lado izquierdo DENTRO del input*/
+    border: 1px solid #5ac5aa;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño total */
+    outline: none;
+    background-color:#f4f2f2;
+  }
+
+
+@media (min-width: 768px) {
+  .header-contenido input{
     width: 90rem;
   }
 }
 
-.header-titulo {
-    
-    font-size: 3.2rem;
-    padding-left: 1.5rem; /*rellenamos el lado izquierdo*/
-    padding-right: 4.5rem; /*rellenamos el lado derecha*/
-    
-}
 
 
-.header-principal h3{
-    color: var(--blanco);
-    margin: 0;  /*quitamos el margin para q tome todo el color de fondo.*/
-    padding: 1.5rem; /*relleno del contenedor h3.*/
-    font-size: 1.5rem; /*tamaño de letra del h3*/
-    text-align: center; /*centramos el contenido h3*/
-    background-color: var(--primario) /*color de fondo del h3*/
-   
-}
+
+
 
 
 /*titulo + busqueda + miCuenta + Carrito*/
@@ -82,6 +108,7 @@ a {
     justify-content: center;
     max-width: 120rem; /*/* Establece el ancho máximo del contenedor */
     margin: 0 1rem 0 2.5rem; 
+    padding: 0 1rem;
 }
 
 
@@ -91,30 +118,28 @@ a {
   }
 }
 
-.header-contenedor-a{
-    display: flex;
-   
-    justify-content: space-between;
-    align-items: center;
-  
-    
-}
 
 @media (min-width: 768px) {
   .header-contenedor-a{
     flex-direction: row;
   }
 }
-.miCuenta, .miCarrito {
-  position: relative; /* Permite mover los elementos sin sacarlos del flujo normal */
+
+
+
+
+
+
+.logo-titulo{
+  display: flex;
+  align-items: center; /* Centra los elementos horizontalmente */
+  text-align: center; /* Centra el texto */
+
 }
 
-.miCuenta span {
-  display: flex;
-  font-size: 1.3rem;
-  position: relative; /*para mover o super poner a cualquier elemento*/
-  bottom: 0.5rem;
-  
+.logo-titulo img {
+  height: 13rem;
+  margin-right: -3rem;
 }
 
 .miCuenta {
@@ -122,20 +147,40 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 7rem;
-  margin: 0 2rem;
-  right: -5rem;
-  text-align: center;
 }
 
-.miCarrito {
+.miCuenta span {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 8rem;
+  font-size: 12px;
+}
+
+.miCuenta a {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  right: -4rem;
-
 }
+
+.iconos {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;  
+}
+
+.miCarrito a {
+  margin-left: 2rem;
+ 
+}
+
+
+
+.logo-titulo h2 span {
+  color: #5ac5aa;
+}
+
 
 
 
@@ -144,6 +189,7 @@ a {
 .contenedor-navegacion{ /*div*/
   display: flex;
   margin-top: 2rem;
+  gap: 2rem;
 
 }
 
@@ -163,13 +209,19 @@ a {
 
 .contenedor {
     width: 120rem; /*ancho de 120rem  xq es el estandar*/
-    margin: 0 auto 0 auto /*top, right, bottom, left*/
-
+    margin: 0 auto 0 auto; /*top, right, bottom, left*/
+    margin-top: 10px;
     /*margin-left: auto; /*margen izquierdo: posicion auto*/
     /*margin-right: auto; /*margen derecho: posicion auto*/
     
 }                  
+@media (min-width: 768px) {
+  .contenedor {
+    margin-top: -2rem;
 
+  }
+    
+}
 .navegacion-principal a {
    color:#5ac5aa;
    text-transform: uppercase; /*texto en mayuscula*/
@@ -188,14 +240,31 @@ a {
 
 
 
-
-
                             /*carousel*/
+                            
+.contenedor-principal-pagina{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(250, 250, 255);
+ 
+
+}
+
+.main-contenido {
+  max-width: 120rem;
+  margin: 0 auto; /* Esto centra el contenido */
+  padding: 15px;
+ 
+}
 
 .contenedor-carousel{
   position:relative;
   width: 100%; /*Ajustamos el tamaño del contenedor de 'carousel'*/
   overflow: hidden;/* Oculta las imágenes fuera del contenedor */
+  max-width: 125rem;
+  margin: 0 auto; /*Centra el carousel horizontalmente*/
+  overflow: hidden; /* Oculta cualquier desbordamiento de imágenes */
 
 }                          
 
@@ -208,29 +277,349 @@ a {
 .contenedor-imagenes img {
 
   width: 100%; /*cada imagen ocupa el 100% de su contenedor*/
- 
+  height: 48rem;
+  object-fit: cover; /* Mantiene la proporción de la imagen */
 }
 
 .contenedor-carousel button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
+  border: none;
+  padding: 1.2rem;
+  cursor: pointer; /*aparece la mano 'seleccionar'*/
+  z-index: 1;
+ 
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 1;
+  font-size: 2.2rem;
 }
 
 button.prev {
-  left: 10px; /* Botón a la izquierda */
+  left: 10px; /* Movemos la ubi del boton 10px hacia la izquierda */
 }
 
 button.next {
-  right: 10px; /* Botón a la derecha */
+  right: 10px; /* Movemos la ubi del botton 10px hacia la derecha */
 }
 
 button:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Efecto hover en botones */
+  background-color: rgba(0, 0, 0, 0.8); /* Efecto al posicionarme en los botones */
+}
+
+
+.linea-separacion{
+ 
+  margin-top: 3rem; /* Elimina márgenes */
+  padding: 0; /* Elimina padding, lo ajustaremos con transform */
+  border-top: 2px solid #cecece; /* Línea de separación */
+  border-bottom: none; /* Sin línea en la parte inferior */
+  transform: translateY(10px); 
+}
+
+
+
+                        /*Ofertas-Promociones*/
+
+.titulo-ofertas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+ 
+}
+
+.contenedor_ofertas {
+  margin-top: 2rem; /* Agrega un espacio de 2rem entre la sección anterior y las ofertas */
+}
+
+.contenedor-pro-destacados{
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 3rem 0;
+}
+
+.contenedor-pro-destacados a {
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .dos-columnas{
+      display: grid;
+      grid-template-columns: 50% 50%; /*columnas de plantilla de cuadrícula*/
+      column-gap: 1rem;
+      justify-content: center; /* Centra las columnas horizontalmente */
+      align-items: center; /* Centra el contenido de cada columna verticalmente */
+      
+  }
+}
+
+.entrada_oferta img {
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.otras-ofertas{
+  display: flex;
+  margin-top: 2rem;
+  gap: 2.5rem;
+  
+
+}
+
+
+/* productos destacadsa con precios*/
+.titulo-pro-destacados{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+                              /*Carousel 2*/      
+ 
+/* Estilos básicos del carrusel */
+.contenedor-carousel-2 {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* Ancho máximo del carrusel, ajusta según necesites */
+  margin: auto;
+  overflow: hidden; /* Oculta las imágenes que no están visibles */
+}
+
+/* Contenedor de imágenes */
+.contenedor-imagenes-2 {
+  display: flex;
+    transition: transform 0.5s ease-in-out; /* Animación de desplazamiento */
+    width: 200%; /* Ajustamos el ancho para que el desplazamiento sea fluido */
+    gap: 2rem;
+}
+
+
+
+
+/* Estilos de los elementos <a> que contienen las imágenes */
+.contenedor-imagenes-2 a { 
+    box-sizing: border-box;
+    padding: 0 10px; /* Espaciado entre las imágenes */
+}
+
+/* Estilos de las imágenes */
+.contenedor-imagenes-2 img {
+  width: 100%; /* Las imágenes se ajustan al 100% del contenedor */
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*sombra*/
+  
+}
+
+
+.contenedor-imagenes-2 a:hover img {
+  transform: scale(1.1); /* Agranda la imagen al 110% */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa cuando está en hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.contenedor-carousel-2 button:hover {
+  background-color: rgba(0, 0, 0, 0.2); /* Efecto al posicionarme en los botones */
+}
+
+button.prev {
+  left: 0;
+}
+
+
+
+
+                  /*Acerca de 'Farmacia en Casa'*/
+
+.header-2{
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom:  5rem;
+}
+
+
+ .parrafo-span{
+  font-weight: 600;
+  color: #000;
+}
+
+
+
+                  /*Footer pie de pagina*/
+
+.pie-pagina{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6e716e;
+  margin-top: 5rem;
+}
+
+
+
+                      /*FORMULARIO: Clientes registrados*/
+
+.header-inicio-sesion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-inicio-sesion h3{
+  color: var(--primario);
+  font-weight: 400;
+  
+}
+
+.contenedor-titulo-h3{
+  
+  border-bottom: 0.5px solid rgb(170, 170, 170); /* Línea en la parte inferior */
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.linea-separacion-2{
+
+  border-top: 1.2px solid var(--primario); /* Línea de separación */
+  border-bottom: none; /* Sin línea en la parte inferior */
+  margin-bottom: 2rem;
+}
+
+.contenedor-login{
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos entre la izquierda y derecha */
+  align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+  max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  gap: 2rem; /* Espacio entre los dos contenedores */
+  margin-top: 5rem;
+ 
+}
+.clientes-registrados, .nuevos-clientes {
+  width: 48%; /* Ajusta el tamaño para que ambos contenedores ocupen el 48% del ancho */
+}
+
+.clientes-registrados h3{
+  margin-left: 2rem;
+  font-weight: 600;
+ 
+}
+
+.formulario {
+  width: min(60rem,100%);
+  border-radius: 1rem;
+ 
+}
+
+.formulario fieldset{
+  border: none;
+  margin-left: 1rem;
+}
+
+.formulario legend {
+  margin-bottom: 2rem;
+  color: #4f4e4e;
+}
+
+.campo{
+  margin-bottom: 2.5rem;
+}
+
+.campo label {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+
+.input-text{
+  width: 100%;
+  padding: 0.5rem;
+ 
+  
+}
+
+.input-text:focus {
+  outline: none; /* Eliminar contorno predeterminado */
+  border-color: rgba(0, 128, 255, 0.5); /* Cambiar el color del borde */
+  box-shadow: 0 0 5px rgba(0, 128, 255, 0.5); /* Sombra azulada al enfocar */
+}
+
+
+.boton{
+  background-color: var(--primario);
+  color: var(--blanco);
+  margin-top: 3rem;
+  text-decoration: none;
+  border-radius:  2rem;
+  text-align: center;
+  border: none; 
+  height: 6rem; 
+  
+
+}
+
+.boton span{
+  margin-top: 0rem;
+}
+
+.boton:hover{
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .boton{
+      width: 14rem;
+    }
+}
+
+.contenedor-checkbox{
+  margin-left: .5rem;
+}
+
+.input-checkbox{
+  transform: scale(1.5);
+  margin-right: 10px
+}
+
+
+
+.campo span {
+  color: var(--gris);
+  margin-left: 1rem;
+}
+
+/*Lado derecho*/
+.contenedor-titulo-h3-dos{
+  border-bottom: 0.5px solid rgb(170, 170, 170); /* Línea en la parte inferior */
+  border-top: none;
+  border-right: none;
+  margin-bottom: 2rem;
+ 
+
+}
+
+.boton-crear{
+  border-radius: .5rem;
+  width: 150px; 
+  height: 40px; 
+  font-size: 14px; 
+  padding: 5px 10px; 
 }

@@ -16,131 +16,243 @@
 
 <body>
 
+    <div class="relleno"></div>
+
     <!--(1) Header de la Pagina  -->
-    <header class="header-principal"> <!--Encabezado de la pagina-->
-        <h3> Hasta 6 cuotas sin interes en Seleccionados *</h3>
-
-        <div class="header-busqueda">
-                <h1 class="header-titulo">Farmacia en Casa</h1>
-                <input type="search" placeholder="  ¿Qué estás buscando?">
-
-                <div class="header-contenedor-a">
-
-                    <div class="miCuenta">
-                        <a href="">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5ac5aa" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                                <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-                              </svg>
-                          <span>Mi cuenta</span>
-                        </a>
-                        
-                        
-                    </div>
-
-                    <div class="miCarrito">
-                        <a href="">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5ac5aa" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                                <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                                <path d="M17 17h-11v-14h-2" />
-                                <path d="M6 5l14 1l-1 7h-13" />
-                              </svg>
-                        </a>
-                        
-                    </div>
-                      
-                </div>
-        </div><!--/header-busqueda-->
+    <div class="contenedor-header-principal">
+    <header class="header-contenido"> <!--Encabezado de la pagina-->
         
+        <a href="index.html" class="logo-titulo"> <!-- Reemplaza "URL_DE_DESTINO" con el enlace al que deseas redirigir -->
+            <img src="./img/farmacia.jpg" alt="Farmacia en Casa">  
+            <h2 class="titulo">
+                <span>Farmacia</span>
+                <span>en Casa</span>   
+            </h2>               
+        </a>
+        
+            
+            <input type="search" placeholder=" Buscá por producto, marca o categoria...">
+
+            <div class="iconos">
+                <div class="miCuenta">
+                    <a href="/miCuenta.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5ac5aa" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                        </svg>
+                        <span>Mi cuenta</span> 
+                                                    
+                </div>
+
+            <div class="miCarrito">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5ac5aa" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M17 17h-11v-14h-2" />
+                            <path d="M6 5l14 1l-1 7h-13" />
+                            </svg>
+                    </a>
+                    
+            </div>
+            </div>   
     </header>
+    </div> <!--fin contenedor-principal-->
+     
 
 
-   <!--(2) Barra de Navegacion -->
-   <div class="contenedor-navegacion">
+    <!--(2) Barra de Navegacion -->
+    <div class="contenedor-navegacion">
         <nav class="navegacion-principal contenedor">
             <a href="">Marcas</a>
             <a href="">Promociones</a>
             <a href="">Solares</a>
             <a href="">Combos</a>
         </nav>
-   </div>
+    </div>
     
- 
 
-   <!--(3) Carousel de imagenes-->
-   <div  class="contenedor-carousel">
-        <button class="prev" onclick="moveLeft()">&#10094;</button> <!--'previ': anterior-->
-            <div class="contenedor-imagenes">
-                <img src="./img/2x1.webp" alt="">
-                <img src="./img/jabon.jpg" alt="">
-                <img src="./img/perfume mujer.webp" alt="">
-                <img src="./img/protector solar.webp" alt="">
-                <img src="./img/shampu.jpg" alt="">
+    <!--(3)Contenedor del main-->
+    <div class="contenedor-principal-pagina">
+
+        
+   <!--(4)main principal-->
+    <main class="main-contenido">
+
+
+        <!-- (a) Carousel de imágenes 1 -->
+        <div class="contenedor-principal-carousel">
+            <div class="contenedor-carousel">
+                <button class="prev" onclick="moveLeft()">&#10094;</button>
+                <div class="contenedor-imagenes">
+                    <img src="./img/2x1.webp" alt="">
+                    <img src="./img/jabon.jpg" alt="">
+                    <img src="./img/perfume mujer.webp" alt="">
+                    <img src="./img/protector solar.webp" alt="">
+                    <img src="./img/shampu.jpg" alt="">
+                </div> 
+                <button class="next" onclick="moveRight()">&#10095;</button>    
+            </div>
+        </div>
+
+        <!--linea de separacion-->
+        <div class="linea-separacion"> </div>
+
+        
+
+        <!-- (b) Ofertas -->
+        <div class="titulo-ofertas">
+            <h2>Especial Cuidado Facial y Corporal</h2>
+        </div>
+
+        <div class="contenedor_ofertas  dos-columnas">
+            <article class="entrada_oferta">
+                <a href="#"> 
+                    <img src="./imagen_2/Descuento-facial y corporal/1.jpg" alt="">
+                </a>             
+            </article>  
+            <article class="entrada_oferta">
+                <a href="#">
+                    <img src="./imagen_2/Descuento-facial y corporal/2.jpg" alt="">
+                </a>
+            </article>
+        </div> 
+
+        <div class="contenedor_ofertas  dos-columnas">
+            <article class="entrada_oferta">
+                <a href="#"> 
+                    <img src="./imagen_2/Descuento-facial y corporal/3.jpg" alt="">
+                </a>             
+            </article>  
+            <article class="entrada_oferta">
+                <a href="#">
+                    <img src="./imagen_2/Descuento-facial y corporal/4.jpg" alt="">
+                </a>
+            </article>
+        </div>
+
+        <!-- (c) Otras Ofertas-->
+        <div class="otras-ofertas">
+            <article class="entrada_oferta">
+                <a href="#"> 
+                    <img src="./imagen_2/Descuento-facial y corporal/5.1.jpg" alt="">
+                </a>             
+            </article>  
+            <article class="entrada_oferta">
+                <a href="#">
+                    <img src="./imagen_2/Descuento-facial y corporal/5.2.jpg" alt="">
+                </a>
+            </article>
+            <article class="entrada_oferta">
+                <a href="#">
+                    <img src="./imagen_2/Descuento-facial y corporal/5.3.jpg" alt="">
+                </a>
+            </article>
+            <article class="entrada_oferta">
+                <a href="#">
+                    <img src="./imagen_2/Descuento-facial y corporal/5.4.jpg" alt="">
+                </a>
+            </article>
+        </div>
+
+         <!--linea de separacion-->
+         <div class="linea-separacion"> </div>
+         
+
+        <div class="contenedor-pro-destacados">
+            <h2 class="titulo-pro-destacados">Estamos Convencidos que Algunos de estos Productos te INTERESA  <a href="#"> (Ver Todos) </a> </h2>
+        </div>
+        
+          <!-- Carousel de imágenes 2 -->
+        
+        <div class="contenedor-carousel-2">
+            <button class="prev" onclick="moveLeft()">&#10094;</button>
+            <div class="contenedor-imagenes-2">                            
+                <a href="#"> <img src="./imagen_2/OFERTAS/1.jpg" alt=""> </a> 
+                <a href="#"><img src="./imagen_2/OFERTAS/2.webp" alt=""></a>
+                <a href="#"><img src="./imagen_2/OFERTAS/3.webp" alt=""></a>
+                <a href="#"><img src="./imagen_2/OFERTAS/4.webp" alt=""></a>
+                <a href="#"><img src="./imagen_2/OFERTAS/5.webp" alt=""></a>
+                <a href="#"><img src="./imagen_2/OFERTAS/6.webp" alt=""></a>
+                <a href="#"><img src="./imagen_2/OFERTAS/7.webp" alt=""></a>
+                <a href="#"><img src="./imagen_2/OFERTAS/8.webp" alt=""></a>
+                <a href="#"><img src="./imagen_2/OFERTAS/9.webp" alt=""></a>
+                <a href="#"><img src="./imagen_2/OFERTAS/10.webp" alt=""></a>
             </div> 
-        <button class="next" onclick="moveRight()">&#10095;</button>    
-   </div><!--contenedor del carousel-->
+            <button class="next" onclick="moveRight()">&#10095;</button>    
+        </div>
+        
 
-   
-   
-   <div class="cont_Dermocosmetico">
-     <h2>Categorias</h2>
+    <!--linea de separacion-->
+    <div class="linea-separacion"> </div>
 
-    <div >
-        <a href=""> Dermocosmetica</a>
-
-    </div>
-    
-    <div>
-            <a href="">Belleza</a>
-    </div>
-    
-    <div>
-        <a href="">Cuidado Personal</a>
-
-    </div>
-     
-    <div>
-        <a href="">Combos</a>
-
-    </div>
-     
-    <div>
-        <a href="">Nutricion y Deportes</a>
-
-    </div>
-
-     
-    <div>
-        <a href="">Hogar y Alimentos</a>
-
-    </div>
-     
-    <div>
-        <a href="">Alimentos</a>
-
-    </div>
-    
-    <div>
-        <a href="">Medicamentos</a>
-    </div>
-    
-
-
-   </div> <!--fin categorias-->
-
-
-
-
-    <footer> 
-        <p> Copyright 2023. Todos los derechos reservados | Suizo Argentina S.A. ©
-
-            CUIT 30-51696843-1, Av. Belgrano 420 (C1428BKC) San Luis  
+    <h2 class="header-2">Farmacia en Casa Online. Tu Farmacia Online de confianza, cerca de ti.</h2>
+    <p>
+        Nuestra farmacia física inició su actividad  en 1988 y en el año 2006 creamos
+        Farmacia en Casa Online, el canal de Farmacia Online, a través del cual 
+        ofrecemos a nuestros clientes una parte representativa de los servicios que
+        prestamos presencialmente en nuestra farmacia física: asesoramiento y venta
+        de productos de cosmética, nutrición, higiene, bebé, productos sanitarios, 
+        etc. Desde entonces nos hemos esforzado para proporcionar cada día una atención
+        excelente, basada en principios de honestidad, confianza, calidad y seguridad.
+    </p>
+       <span class="parrafo-span">Confianza y Calidad</span>
+       <p>
+        Con una trayectoria de más de 30 años en farmacia hemos desarrollado una 
+        gran experiencia en productos farmacéuticos y de parafarmacia, y también
+        en los procesos necesarios para gestionarlos. Durante este tiempo, a través de
+        Farmacia en Casa Online hemos asesorado y dado respuesta a múltiples peticiones
+        de nuestros clientes, orientándoles y ofreciéndoles la solución más adecuada 
+        a sus necesidades. Por su actividad realizada día a día, Farmacia en
+        Casa Online es considerada como una Farmacia Online referente y de confianza.
+        La calidad de nuestros productos está asegurada, pues sólo los compramos directamente a los laboratorios que los producen y a los centros de distribución que abastecen a la red de farmacias de España, nuestros clientes pueden confiar en que los productos que les ofrecemos están homologados y autorizados para su venta en la UE.
+       </p> 
+       <span class="parrafo-span">Seguridad y Privacidad </span>
+       <p>
+            La seguridad de las operaciones la consideramos esencial, por ello sólo
+            operamos con Comercio Electrónico Seguro (CES), que garantiza la seguridad 
+            de las transacciones y autenticación de los usuarios de las tarjetas a través
+            de red de servicios bancarios Redsys, o con medios de pago online
+            equivalentes; a su vez, la confidencialidad de las actividades y de 
+            todas las operaciones que realizan los usuarios en Farmacia en Casa Online
+            está protegida mediante el protocolo de seguridad SSL.
+            Para nosotros la privacidad de los datos de nuestros clientes también 
+            es muy importante, por ello no almacenamos datos de las tarjetas bancarias
+            ni otros medios de pago,  la validación del usuario y de la transacción de
+            pago con tarjeta la hace directamente el banco emisor de la tarjeta bancaria; a su vez, no compartimos ningún dato de nuestros usuarios con terceros, salvo los imprescindibles para realizar la entrega de los pedidos.
+        </p>     
+        <span class="parrafo-span">Asesoramiento y ayuda</span>
+        <p>
+            Actualmente el catálogo de nuestra Farmacia Online recoge más de 700 marcas
+            diferentes y más de 15.000 productos. Asesoramos continuamente a nuestros 
+            usuarios sobre productos de cosmética, nutrición, higiene, bebé, productos
+            sanitarios, etc, en los canales online, telefónico y presencial. Somos una
+            Farmacia Online con un gran conocimiento de productos y servicios de 
+            parafarmacia, formada por un grupo de profesionales con una dilatada 
+            experiencia en el sector farmacéutico.
+            No dudes en contar con nosotros, a nuestros profesionales farmacéuticos y
+            técnicos les encantará ayudarte para que tu decisión sea siempre la más
+            adecuada.</p>
         </p>
+        
+   </main> <!-- Fin main -->
 
+   </div>
+
+   
+   
+   
+
+   
+
+
+
+   <!--() Pie de pagina -->
+    <footer class="pie-pagina"> 
+        <p> © 2006-2023 Farmacia en Casa Online </p>
     </footer>
 
     
