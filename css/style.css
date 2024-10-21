@@ -6,7 +6,7 @@
     --oscuro: #212121;
     --primario: #5ac5aa;
     --secundario: #f3b704;
-    --gris: #757575;
+    --gris: #909090;
 }
        
        
@@ -14,7 +14,7 @@
 
 html{
     font-size: 55%;
-    font-family: sans-serif;/*para que se aplique a todos los textos*/
+    font-family: Arial, Helvetica, sans-serif;/*para que se aplique a todos los textos*/
     
 }
 body{
@@ -24,10 +24,13 @@ body{
  
   }
 
-h1,h2,h3{
-  color:#1c1b1b
+h2{
+  color: #292929;
 }
 
+p{
+  color: #666666;
+}
 a {
     text-decoration: none;
 }
@@ -35,12 +38,14 @@ input:focus {
   outline: none; /* Elimina el contorno del borde al enfocarse */
 }
 
+
+
                         /* Header de la Pagina */
 
 
 .relleno{
   margin: 0;  /*quitamos el margin para q tome todo el color de fondo.*/
-  padding: 2rem; /*relleno del contenedor h3.*/
+  padding: 1.5rem; /*relleno del contenedor h3.*/
   font-size: 1.5rem; /*tamaño de letra del h3*/
   text-align: center; /*centramos el contenido h3*/
   background-color: var(--primario) /*color de fondo del h3*/
@@ -142,12 +147,53 @@ input:focus {
   margin-right: -3rem;
 }
 
+
 .miCuenta {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
+/*-------------cartel opciones-----------*/
+
+.dropdown {
+  display: none; /* Ocultar por defecto */
+  position: absolute; /* Para que se posicione relativo al padre */
+  background-color: var(--blanco);
+  border: 1px ; 
+  border-radius: .2rem;
+  padding: 1rem; /* Espacio interno */
+  top: 100%; 
+  width: 120px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+  transition: opacity 0.5s ease-in-out 0.3s, transform 0.5s ease-in-out 0.3s; /* Suavidad con delay */
+  
+}
+
+.miCuenta:hover .dropdown {
+  display: block; /* Mostrar el dropdown al pasar el mouse */
+
+}
+
+.option a{
+  color: var(--gris);
+}
+
+
+.dropdown .option {
+  padding: 0.5rem; /* Espacio interno para las opciones */
+  
+  
+}
+
+.dropdown .option:hover {
+  background-color: #f0f0f0; /* Color de fondo al pasar el mouse */
+}
+
+
+/*-------------cartel opciones-----------*/
+
 
 .miCuenta span {
   display: flex;
@@ -162,6 +208,7 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--gris);
 }
 
 .iconos {
@@ -171,7 +218,7 @@ input:focus {
 }
 
 .miCarrito a {
-  margin-left: 2rem;
+  margin-left: 1rem;
  
 }
 
@@ -253,10 +300,18 @@ input:focus {
 
 .main-contenido {
   max-width: 120rem;
-  margin: 0 auto; /* Esto centra el contenido */
+  margin: 0 ; /* Esto centra el contenido */
   padding: 15px;
- 
+  
 }
+
+@media (min-width: 768px) {
+  .main-contenido{
+    width: 100%;
+  }
+    
+}
+
 
 .contenedor-carousel{
   position:relative;
@@ -368,7 +423,7 @@ button:hover {
 .entrada_oferta img {
   display: block;
   margin: 0 auto; /* Centra la imagen horizontalmente */
-  max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+  width: 100%; /* Asegura que la imagen no se salga del contenedor */
   height: auto; /* Mantiene la proporción de la imagen */
 }
 
@@ -450,26 +505,16 @@ button.prev {
   text-align: center;
   margin-top: 5rem;
   margin-bottom:  5rem;
+ 
 }
 
 
  .parrafo-span{
-  font-weight: 600;
-  color: #000;
+  color: #1c1c1c;
+  font-weight: bold;
+
+
 }
-
-
-
-                  /*Footer pie de pagina*/
-
-.pie-pagina{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #6e716e;
-  margin-top: 5rem;
-}
-
 
 
                       /*FORMULARIO: Clientes registrados*/
@@ -508,18 +553,19 @@ button.prev {
   justify-content: space-between; /* Distribuye los elementos entre la izquierda y derecha */
   align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
   max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  gap: 2rem; /* Espacio entre los dos contenedores */
+  gap: 10rem; /* Espacio entre los dos contenedores */
   margin-top: 5rem;
  
 }
 .clientes-registrados, .nuevos-clientes {
   width: 48%; /* Ajusta el tamaño para que ambos contenedores ocupen el 48% del ancho */
+  color: #292929;
 }
 
 .clientes-registrados h3{
   margin-left: 2rem;
   font-weight: 600;
- 
+  
 }
 
 .formulario {
@@ -534,13 +580,69 @@ button.prev {
 }
 
 .formulario legend {
-  margin-bottom: 2rem;
-  color: #4f4e4e;
+  padding-left: 0;
+  margin-bottom: 4rem;
+  color: #272727;
 }
 
 .campo{
   margin-bottom: 2.5rem;
 }
+
+.contenedor-login-dos{
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+
+/*crearCuenta*/
+@media (min-width: 768px) {
+    .contenedor-login-dos{
+      justify-content: space-between; /* Distribuye los elementos entre la izquierda y derecha */
+      align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+    }
+}
+
+
+
+.referencia{
+  margin-top: 8rem;
+}
+
+.campo2 input{
+ width: 16rem;
+}
+
+
+
+.legend{
+  display: flex;
+  justify-content:flex-start;
+  width: 100%;
+  font-weight: 500; /*sin rem o px*/
+  font-size: 2.5rem;
+  border: none;
+  border-bottom: 1px solid var(--gris);
+  padding: 1rem;
+  
+  
+ 
+}
+
+
+.contenedor-checkbox {
+  margin-bottom: 4rem;
+}
+.contenedor-checkbox p {
+  color: red;
+  font-size: 1.5rem;
+  user-select: none; /* Evita la selección de texto */
+
+}
+/*fin crear cuenta*/
+
+
 
 .campo label {
   font-weight: bold;
@@ -549,12 +651,15 @@ button.prev {
 }
 
 
-.input-text{
-  width: 100%;
+.input-text {
+  width: 98%;
   padding: 0.5rem;
- 
+  font-size: 14px;
+  color: #3b3b3b;
   
 }
+
+
 
 .input-text:focus {
   outline: none; /* Eliminar contorno predeterminado */
@@ -599,11 +704,14 @@ button.prev {
   margin-right: 10px
 }
 
-
+.boton-span span{
+  color: var(--gris);
+}
 
 .campo span {
-  color: var(--gris);
+  color: red;
   margin-left: 1rem;
+  user-select: none; /* Evita la selección de texto */
 }
 
 /*Lado derecho*/
@@ -622,4 +730,97 @@ button.prev {
   height: 40px; 
   font-size: 14px; 
   padding: 5px 10px; 
+}
+
+
+
+              /*Footer pie de pagina*/
+              
+
+.pie-de-pagina{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem 2rem 0 2rem;
+  padding: 0;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+
+}
+
+.footer_list {
+  margin: 0; /* Elimina márgenes innecesarios */
+  padding: 0; /* Asegúrate de que no haya padding adicional */
+  max-width: 100%;
+}
+
+.pie-de-pagina div{
+  flex: 1; /* Asegura que cada div ocupe el mismo tamaño horizontalmente */
+  text-align: center; /* Centra el contenido dentro de cada div */
+  padding: 10px;
+}
+
+
+.footer_list h4{
+  border: none;
+  border-bottom: 1.5px solid var(--primario);
+  padding: 1rem;
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin: 0; 
+  width: 16rem; /*mismo tamaño de liniea bottom*/
+  color: var(--gris);
+}
+
+
+.pie-de-pagina ul{
+  list-style-type: none; /*quitamos los estilos por default de las listas*/
+  padding-left: 0;
+  text-align: left;
+  margin-top: 2rem;
+  
+  
+}
+
+.pie-de-pagina li{
+  margin-top: 1.5rem;
+  font-size: 12px;
+  color: var(--gris);
+}
+
+.pie-de-pagina a  {
+  color:var(--gris) ;
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.pie-de-pagina a:hover{
+ 
+  color: var(--primario);
+
+}
+
+.logo-footer{
+  display: flex;
+  width: 193px;
+ 
+
+}
+
+
+
+
+
+.small-pie{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6e716e;
+  margin-top: 5rem;
+  border-top: 1px solid;
+  width: 100%;
+}
+
+.small-pie p {
+  color: var(--blanco);
+  
 }

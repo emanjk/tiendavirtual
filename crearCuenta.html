@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmacia en Casa</title>
-
     <link rel="preload" href="css/normalize.css" as="style"> <!-- precargar la hoja de estilos normalize.css antes de que se necesite oficialmente en la página-->
     <link rel="stylesheet" href="css/normalize.css"> <!--'Normalize', la libreria que cargue primero-->
     <link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet"> <!--fuente externa 'Krub'-->
@@ -17,11 +16,12 @@
 
 <body>
 
+    
     <div class="relleno"></div>
 
     <!--(1) Header de la Pagina  -->
     <div class="contenedor-header-principal">
-    <header class="header-contenido"> <!--Encabezado de la pagina-->
+    <header class="header-contenido"> <!--Encabezado de la pagina-->   
         <a href="index.html" class="logo-titulo"> <!-- Reemplaza "URL_DE_DESTINO" con el enlace al que deseas redirigir -->
             <img src="./img/farmacia.jpg" alt="Farmacia en Casa">  
             <h2 class="titulo">
@@ -30,46 +30,46 @@
             </h2>               
         </a>
             
-            <input type="search" placeholder=" Buscá por producto, marca o categoria...">
+        <input type="search" placeholder=" Buscá por producto, marca o categoria...">
 
-            <div class="iconos">
-                <div class="miCuenta">
-                    <a href="/miCuenta.html" class="mi-cuenta-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5ac5aa" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <div class="iconos">
+            <div class="miCuenta">
+                <a href="miCuenta.html" class="mi-cuenta-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5ac5aa" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                    <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                    </svg>
+                    <span>Mi cuenta</span> 
+                </a>
+
+                <!--cartel de opciones: -->
+                <div class="dropdown">
+                    <div class="option">
+                        <a href="miCuenta.html">Iniciar sesión</a> <!--Iniciar sesion-->
+                    </div>
+
+                    <div class="option">
+                        <a href="crearCuenta.html">Crear cuenta</a>
+                    </div><!--Crear cuenta-->
+                </div>  
+
+            </div> <!--.miCuenta-->
+
+
+        <div class="miCarrito">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5ac5aa" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+                        <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                        <path d="M17 17h-11v-14h-2" />
+                        <path d="M6 5l14 1l-1 7h-13" />
                         </svg>
-                        <span>Mi cuenta</span> 
-                    </a> 
-                     
-
-                  <!--cartel de opciones: -->
-                    <div class="dropdown">
-                        <div class="option">
-                            <a href="miCuenta.html">Iniciar sesión</a> <!--Iniciar sesion-->
-                        </div>
-
-                        <div class="option">
-                            <a href="/crearCuenta.html">Crear cuenta</a>
-                        </div><!--Crear cuenta-->
-                    </div>  
-                    
-                </div> <!--.miCuenta-->
-
-            <div class="miCarrito">
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5ac5aa" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                            <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                            <path d="M17 17h-11v-14h-2" />
-                            <path d="M6 5l14 1l-1 7h-13" />
-                            </svg>
-                    </a>
-                    
-            </div>
+                </a>
+                
+        </div>
             </div>   
     </header>
     </div> <!--fin contenedor-principal-->
@@ -85,83 +85,89 @@
             <a href="">Combos</a>
         </nav>
     </div>
-    
-    <main class="main-contenido">
+
+    <!--(3) main-->
+    <main class="main-contenido"> 
+        <!--Linea y titulo-->  
         <div class="header-inicio-sesion">
-            <h3>Inicio de sesión de cliente </h3>
+            <h3>Crear nueva cuenta de cliente</h3>
         </div>
         <div class="linea-separacion-2"></div>
-    
+
+
         <!--Contenedor-login-->
-        <div class="contenedor-login">
-    
-            <div class="clientes-registrados">
-                <h3>Clientes registrados</h3>
-    
-                <div class="contenedor-titulo-h3">  
-                </div>
-                
+        <div class="contenedor-login contenedor-login-dos ">
+            <div class="clientes-registrados"> 
                 <form class="formulario">
-                    <fieldset>
-                        <legend>Si tiene una cuenta, inicie sesión con su dirección de correo electrónico.</legend>
+                    <fieldset> <!--fieldset-1-->
+                        <legend class="legend">Información personal</legend>
                         
                         <div class="contenedor-campos">
                             <div class="campo">
-                                <label>Correo electrónico</label>
+                                <label>Nombre <span>*</span></label>
                                 <input class="input-text"  type="text">
                             </div>
                             
                             <div class="campo">
-                                <label >Contraseña </label>
+                                <label >Apellidos<span>*</span> </label>
+                                <input class="input-text" type="password">
+                            </div>
+                            
+                            <div class="contenedor-checkbox">
+                                <input class="input-checkbox" type="checkbox">
+                                <label >Suscribirse al boletín</label>
+                            </div> <!--.contenedor-campos-->
+                        </div>
+                    </fieldset> 
+
+
+                    <fieldset> <!--fieldset-2-->
+                        <legend class="legend">Información de inicio de sesión</legend>
+                        <div class="contenedor-campos">
+                            <div class="campo">
+                                <label>Correo electrónico<span>*</span></label>
+                                <input class="input-text"  type="text">
+                            </div>
+                            
+                            <div class="campo">
+                                <label >Contraseña<span>*</span> </label>
+                                <input class="input-text" type="password">
+                            </div>
+
+                            <div class="campo">
+                                <label >Confirmar contraseña<span>*</span> </label>
                                 <input class="input-text" type="password">
                             </div>
                             
                             <div class="contenedor-checkbox">
                                 <input class="input-checkbox" type="checkbox">
                                 <label >Mostrar contraseña</label>
+                                <p>* Campos obligatorios</p>
+                            </div> <!--.contenedor-campos-->
+
+                            <div class="campo referencia">
+                                <label >Código o email de referencia </label>
+                                <input class="input-text" type="password">
                             </div>
-                                
-                            
-                            
-                            <div class="campo">
-                                <input class="boton"  type="submit" value="Iniciar sesión">
-                                    <a href="#">
-                                        <span>¿Olvidaste tu contraseña? </span>
-                                    </a>
+
+                            <div class="campo campo2">
+                                <input class="boton" type="submit" value="Crear una cuenta">
+                                    
                             </div>
-                        </div> <!--.contenedor-campos-->
-        
+                        </div>
+
                     </fieldset>
+
                 </form>
             </div> <!--.clientes-registrados -->
-    
-    
-            
-            <!--contenedor derecho-->
-            <div class="nuevos-clientes">
-                
-                <h3>Nuevos clientes </h3>
-    
-                <div class="contenedor-titulo-h3-dos">  
-                </div>
-    
-                <p>Crear una cuenta tiene muchos beneficios: Pago más rápido, 
-                    guardar más de una dirección, seguimiento de pedidos y mucho más.
-                </p>
-                <input class="boton boton-crear" type="submit" value="Crear una cuenta">
-                <p>Ganarás 300 puntos al crear tu cuenta</p>
-            </div>
-    
-        </div> <!--.contenedor-login-->
+        </div>    
     </main>
-    
-    
-    
 
 
-         <!--() Pie de pagina -->
+
+    <!--() Pie de pagina -->
     <footer class="pie-de-pagina">
-            
+        
         <div class="footer_list">
             <h4>Ubicacion</h4>
             <ul class="listas">
@@ -223,9 +229,6 @@
     <small class="small-pie"> 
         <p> © 2006-2023 Farmacia en Casa Online </p>
     </small>
-    
+</body>
 
-
-    
-    </body>
 </html>
