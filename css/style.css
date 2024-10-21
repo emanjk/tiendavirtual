@@ -7,6 +7,7 @@
     --primario: #5ac5aa;
     --secundario: #f3b704;
     --gris: #909090;
+ 
 }
        
        
@@ -20,7 +21,9 @@ html{
 body{
 
   font-size: 15px; /*1rem = 10px*/
+  overflow-x: hidden;
   margin: 0;
+  padding: 0;
  
   }
 
@@ -704,9 +707,7 @@ button.prev {
   margin-right: 10px
 }
 
-.boton-span span{
-  color: var(--gris);
-}
+
 
 .campo span {
   color: red;
@@ -731,6 +732,39 @@ button.prev {
   font-size: 14px; 
   padding: 5px 10px; 
 }
+
+
+
+/*Pagina 'marcas.html'*/
+.header-marcas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgb(104, 252, 136);
+  margin-bottom: 3rem;
+}
+
+.header-marcas h2{
+  color:#171717;
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.campo-marca{
+  margin: 5rem 0 6rem 0;
+  border: none;
+  border-top: solid;
+  border-bottom: solid;
+}
+
+.campo-marca div{
+  margin-bottom: 2.5rem;
+}
+
+/*fin. Pagina 'marcas.html*/
+
+
 
 
 
@@ -811,13 +845,15 @@ button.prev {
 
 
 .small-pie{
+  
   display:flex;
   justify-content: center;
   align-items: center;
   background-color: #6e716e;
   margin-top: 5rem;
   border-top: 1px solid;
-  width: 100%;
+  
+
 }
 
 .small-pie p {
