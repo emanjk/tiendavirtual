@@ -7,6 +7,7 @@
     --primario: #5ac5aa;
     --secundario: #f3b704;
     --gris: #909090;
+    --claro: rgb(253, 227, 210);
  
 }
        
@@ -777,15 +778,16 @@ button.prev {
 
 
 
+
 .contenedor-marca-link{
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
   width: 100%;
   margin: 2.5rem;
 }
 
-.contenedor-marca-link :hover{
-  border-color: rgba(60, 250, 60, 0.7); /* Cambia el color del borde a verde brillante */
-  box-shadow: 0 0 15px 5px rgba(60, 250, 60, 0.7); /* Añade un resplandor verde */
+
+.contenedor-marca-link a:hover img { 
+  box-shadow: 0 0 10px 5px rgba(60, 250, 60, 0.7);/*aplicar la sombra directamente a la imagen dentro del contenedor*/
   
 }
 
@@ -795,13 +797,112 @@ button.prev {
   border:none;
   border-top:  1px solid var(--gris);
   border-bottom:  1px solid var(--gris);
-  
 }
-
-
 /*fin. Pagina 'marcas.html*/
 
 
+
+
+/*Pagina 'solares.html'*/
+.header-solares{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--claro);
+  margin-bottom: 3rem;
+}
+
+.header-solares h2 {
+  color:#171717;
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.contenedor-main{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  max-width: 100%;
+  overflow: hidden; /* Oculta el contenido desbordante */
+  
+}
+
+.contenedor-main main{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ 
+}
+
+@media (min-width: 768px) {
+  .contenedor-main main{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.contenedor-producto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;           /* Ajusta el ancho del contenedor */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center;     /* Centra el texto en el contenedor */
+  padding:4rem;
+  margin-bottom: 2rem;
+}
+
+
+
+
+.contenedor-producto img{
+  max-width: 100%;        /* La imagen se ajusta al ancho del contenedor */
+  height: auto;           /* Mantiene las proporciones de la imagen */
+  margin-bottom: .5rem;
+}
+
+.contenedor-producto a{
+  color: #6d6b6b;
+  margin-bottom: .5rem;
+  transition: .3s all ease-out; /*(1)suave, antes de :hover*/
+}
+
+.contenedor-producto a:hover{
+  color: var(--primario); /*(2) suave*/
+}
+
+.contenedor-producto span{
+  margin-bottom: 1rem;
+  color: #f66c01;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  border-top: 2px solid var(--primario);
+  width: 65%;
+}
+
+
+.contenedor-producto input{
+  cursor: pointer; /*Aparece la manito en el input*/
+  margin-bottom: 2rem;
+  background: 0 0;
+  color: #333;
+  border: 1px solid #70707045;
+  border-radius: 20px;
+  transition: .3s all ease-out;
+  padding: .5em 1.2em;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 2rem;
+  
+}
+
+.contenedor-producto input:hover{
+  background-color: #fba300; /* Color de fondo medio naranja */
+  color: white; 
+  border: 1px solid #fba300; 
+}
+
+/*fin. 'solares.html'*/
 
 
 
