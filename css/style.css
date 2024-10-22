@@ -302,15 +302,16 @@ input:focus {
 }
 
 .main-contenido {
-  max-width: 120rem;
+  width: 100%;
   margin: 0 ; /* Esto centra el contenido */
-  padding: 15px;
+  padding: 0;
   
 }
 
 @media (min-width: 768px) {
   .main-contenido{
     width: 100%;
+    margin: 0;
   }
     
 }
@@ -526,6 +527,7 @@ button.prev {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .header-inicio-sesion h3{
@@ -545,10 +547,13 @@ button.prev {
 }
 
 .linea-separacion-2{
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.5rem 0 2rem;
   border-top: 1.2px solid var(--primario); /* Línea de separación */
-  border-bottom: none; /* Sin línea en la parte inferior */
-  margin-bottom: 2rem;
+  
+ 
 }
 
 .contenedor-login{
@@ -752,15 +757,47 @@ button.prev {
 }
 
 .campo-marca{
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas filas */
   margin: 5rem 0 6rem 0;
-  border: none;
-  border-top: solid;
-  border-bottom: solid;
+  border:none;
+  border-top:  1px solid var(--gris);
+  border-bottom:  1px solid var(--gris);
+  width: 100%;
+
 }
 
-.campo-marca div{
-  margin-bottom: 2.5rem;
+.campo-marca div{ 
+  display: flex; /*contenedores de 'a'*/
+  margin: 2.5rem;
+  width: 100%; /* Para que cada fila ocupe el 100% del ancho */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  border: none;
 }
+
+
+
+.contenedor-marca-link{
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  width: 100%;
+  margin: 2.5rem;
+}
+
+.contenedor-marca-link :hover{
+  border-color: rgba(60, 250, 60, 0.7); /* Cambia el color del borde a verde brillante */
+  box-shadow: 0 0 15px 5px rgba(60, 250, 60, 0.7); /* Añade un resplandor verde */
+  
+}
+
+.campo-marca-tercero{
+  display: flex;  
+  margin: 5rem 0 6rem 0;
+  border:none;
+  border-top:  1px solid var(--gris);
+  border-bottom:  1px solid var(--gris);
+  
+}
+
 
 /*fin. Pagina 'marcas.html*/
 
