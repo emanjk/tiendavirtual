@@ -319,26 +319,25 @@ input:focus {
 
 
 .contenedor-carousel{
-  position:relative;
-  width: 100%; /*Ajustamos el tamaño del contenedor de 'carousel'*/
-  overflow: hidden;/* Oculta las imágenes fuera del contenedor */
-  max-width: 125rem;
-  margin: 0 auto; /*Centra el carousel horizontalmente*/
-  overflow: hidden; /* Oculta cualquier desbordamiento de imágenes */
-
+  position: relative;
+  width: 100%; /* El carrusel ocupará el 100% del ancho del contenedor padre */
+  max-width: 125rem; /* Ajusta el tamaño máximo del carrusel */
+  margin: 0 auto;
+  overflow: hidden;
 }                          
 
 .contenedor-imagenes{
-  display: flex; /*flexible, pone las imagenes en en fila (row)*/
-  transition: transform 0.5s ease-in-out; /*suaviza el movimiento de las imagenes*/
-  width: calc(100% * 2); /* Ajusta el ancho total del contenedor según la cantidad de imágenes */
+  display: flex; /* Coloca las imágenes en fila horizontal */
+  transition: transform 0.5s ease-in-out; /* Suaviza el desplazamiento */
+  width: 100%; /* Cambiar a 100% para que tome solo el ancho del contenedor */
+  
 }
 
 .contenedor-imagenes img {
-
-  width: 100%; /*cada imagen ocupa el 100% de su contenedor*/
-  height: 48rem;
+  flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
+  height: 100%; /* Asegura que la altura de la imagen sea del 100% del contenedor */
   object-fit: cover; /* Mantiene la proporción de la imagen */
+
 }
 
 .contenedor-carousel button {
@@ -436,12 +435,9 @@ button:hover {
   display: flex;
   margin-top: 2rem;
   gap: 2.5rem;
-  
-
 }
 
 
-/* productos destacadsa con precios*/
 .titulo-pro-destacados{
   display: flex;
   align-items: center;
@@ -449,35 +445,32 @@ button:hover {
 }
 
 
-                              /*Carousel 2*/      
- 
-/* Estilos básicos del carrusel */
+
+
+ /*Carousel 2*/      
 .contenedor-carousel-2 {
   position: relative;
   width: 100%;
-  max-width: 1000px; /* Ancho máximo del carrusel, ajusta según necesites */
-  margin: auto;
+  max-width: 125rem; /* Ancho máximo del carrusel, ajusta según necesites */
+  margin: 0 auto;
   overflow: hidden; /* Oculta las imágenes que no están visibles */
+  
 }
 
-/* Contenedor de imágenes */
+
 .contenedor-imagenes-2 {
-  display: flex;
+    display: flex;
+    width: calc(100% * 2); /* Esto puede permanecer como está */
     transition: transform 0.5s ease-in-out; /* Animación de desplazamiento */
-    width: 200%; /* Ajustamos el ancho para que el desplazamiento sea fluido */
-    gap: 2rem;
 }
 
 
-
-
-/* Estilos de los elementos <a> que contienen las imágenes */
 .contenedor-imagenes-2 a { 
     box-sizing: border-box;
     padding: 0 10px; /* Espaciado entre las imágenes */
 }
 
-/* Estilos de las imágenes */
+
 .contenedor-imagenes-2 img {
   width: 100%; /* Las imágenes se ajustan al 100% del contenedor */
   height: auto;
@@ -497,29 +490,20 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.2); /* Efecto al posicionarme en los botones */
 }
 
-button.prev {
-  left: 0;
-}
 
 
-
-
-                  /*Acerca de 'Farmacia en Casa'*/
-
+/*Inicio 'Acerca de farmacia en casa*/
 .header-2{
   text-align: center;
   margin-top: 5rem;
   margin-bottom:  5rem;
- 
 }
-
 
  .parrafo-span{
   color: #1c1c1c;
   font-weight: bold;
-
-
 }
+/*Fin 'Acerca de Farmacia en casa'*/
 
 
                       /*FORMULARIO: Clientes registrados*/
@@ -605,6 +589,7 @@ button.prev {
 }
 
 
+
 /*crearCuenta*/
 @media (min-width: 768px) {
     .contenedor-login-dos{
@@ -613,8 +598,6 @@ button.prev {
     }
 }
 
-
-
 .referencia{
   margin-top: 8rem;
 }
@@ -622,8 +605,6 @@ button.prev {
 .campo2 input{
  width: 16rem;
 }
-
-
 
 .legend{
   display: flex;
@@ -634,21 +615,19 @@ button.prev {
   border: none;
   border-bottom: 1px solid var(--gris);
   padding: 1rem;
-  
-  
- 
-}
 
+}
 
 .contenedor-checkbox {
   margin-bottom: 4rem;
 }
+
 .contenedor-checkbox p {
   color: red;
   font-size: 1.5rem;
   user-select: none; /* Evita la selección de texto */
-
 }
+
 /*fin crear cuenta*/
 
 
