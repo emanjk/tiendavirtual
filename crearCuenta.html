@@ -98,19 +98,25 @@
         <!--Contenedor-login-->
         <div class="contenedor-login contenedor-login-dos ">
             <div class="clientes-registrados"> 
-                <form class="formulario">
+
+                <!--formulario-->
+                <form class="formulario" onsubmit="return validarFormulario2()">
                     <fieldset> <!--fieldset-1-->
                         <legend class="legend">Información personal</legend>
                         
                         <div class="contenedor-campos">
                             <div class="campo">
                                 <label>Nombre <span>*</span></label>
-                                <input class="input-text"  type="text">
+                                <input id="nombre" class="input-text"  type="text" maxlength="20">
+                                <!--Mensaje de error-->
+                                <div id="mensajeErrorNombre" style="display:none; margin-top:1rem; font-size: 1.5rem; color:#e02b27;"></div>
                             </div>
                             
                             <div class="campo">
                                 <label >Apellidos<span>*</span> </label>
-                                <input class="input-text" type="text">
+                                <input id="Apellido" class="input-text" type="text" maxlength="20">
+                                <!--Mensaje de error-->
+                                <div id="mensajeErrorApellido" style="display:none; margin-top:1rem; font-size: 1.5rem; color:#e02b27;"></div>
                             </div>
                             
                             <div class="contenedor-checkbox">
@@ -126,12 +132,16 @@
                         <div class="contenedor-campos">
                             <div class="campo">
                                 <label>Correo electrónico<span>*</span></label>
-                                <input class="input-text"  type="email">
+                                <input id="correo" class="input-text"  type="text">
+                                <!--Mensaje de error-->
+                                <div id="mensajeErrorCorreo" style="display:none; margin-top:1rem; font-size: 1.5rem; color:#e02b27;"></div>
                             </div>
                             
                             <div class="campo">
                                 <label >Contraseña<span>*</span> </label>
-                                <input class="input-text" type="password">
+                                <input id="passw" class="input-text" type="password" minlength="8" maxlength="15">
+                                <!--Mensaje de error-->
+                                <div id="mensajeErrorPassw" style="display:none; margin-top:1rem; font-size: 1.5rem; color:#e02b27;" ></div>
                             </div>
 
                             <div class="campo">
@@ -146,8 +156,10 @@
                             </div> <!--.contenedor-campos-->
 
                             <div class="campo referencia">
-                                <label >Código o email de referencia </label>
-                                <input class="input-text" type="text">
+                                <label >numero de telefono de referencia </label>
+                                <input id="telefono" class="input-text" type="tel" maxlength="12">
+                                <!--Mensaje de error-->
+                                <div id="mensajeErrorTelefono" style="display:none; margin-top:1rem; font-size: 1.5rem; color:#e02b27;"></div>
                             </div>
 
                             <div class="campo campo2">
