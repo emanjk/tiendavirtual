@@ -18,4 +18,8 @@ Este proyecto consiste en una página web estática que simula una farmacia onli
   ##Créditos
   Este proyecto fue realizado como parte de la materia Programación Web de la facultdad de La Punta - San Luis - Arg.
 
-  
+  ## Cómo ver el sitio
+
+1. Cloná este repositorio:
+   ```bash
+   git clone https://github.com/emanjk/tienda virtual
