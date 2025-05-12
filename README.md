@@ -1,4 +1,4 @@
-# tiendavirtual: FARMACIA- Página web Estética
+# FARMACIA- Página web Estática
 
 Este proyecto consiste en una página web estática que simula una farmacia online (Farmacia en Casa). Presenta una lista de productos y un formulario de contacto para registrar un cliente. No cuenta con funcionalidad de backend ni almacenamiento de datos.
 
